@@ -9,25 +9,26 @@ import propertyfile.PropetyFile;
 
 /*
  * Creating screenshot and attaching to report in Base64Encoding
+ * create extend report
  */
 public final class ExtentLogger {
 
 	private ExtentLogger() {
 	}
 
-	public static void pass(String msg) {
+	public static void pass(String message) {
 
-		ExtentManager.getExtentTest().pass(msg);
+		ExtentManager.getExtentTest().pass(message);
 	}
 
-	public static void fail(String msg) {
+	public static void fail(String message) {
 
-		ExtentManager.getExtentTest().fail(msg);
+		ExtentManager.getExtentTest().fail(message);
 	}
 
-	public static void skip(String msg) {
+	public static void skip(String message) {
 
-		ExtentManager.getExtentTest().skip(msg);
+		ExtentManager.getExtentTest().skip(message);
 	}
 	
 	public static void pass(String Message,boolean isScreenshotNeeded) throws Exception {
