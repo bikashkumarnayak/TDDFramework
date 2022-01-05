@@ -1,6 +1,7 @@
 package com.Driver;
 
 import java.net.URL;
+import java.time.Duration;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -68,7 +69,7 @@ public final class Driver {
 			}
 			DriverManager.getDriver().manage().window().maximize();
 			DriverManager.getDriver().manage().deleteAllCookies();
-			DriverManager.getDriver().manage().timeouts().implicitlyWait(Config.getExplecitywait(), TimeUnit.SECONDS);
+			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Config.getExplecitywait()));
 			try {
 				DriverManager.getDriver().get(Jsonutiles.get(ConfigProperty.URL));
 			} catch (Exception e) {

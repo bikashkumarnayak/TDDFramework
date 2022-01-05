@@ -11,7 +11,6 @@ public final class Config {
 	}
 	private final static String RESOURCEPATH=System.getProperty("user.dir");
 	private final static String PROJECTMAINPATH=RESOURCEPATH.concat("\\src\\main\\java");
-	private final static String CHROMEDRIVERPATH=RESOURCEPATH.concat("\\Driver\\chromedriver.exe");
 	private final static String CONFIGPROPERTY=PROJECTMAINPATH.concat("\\com\\data\\Global.Properties");
 	private final static int EXPLECITYWAIT=10;
 	private final static String EXCEL=PROJECTMAINPATH.concat("\\com\\data\\testdata1.xlsx");
@@ -184,8 +183,6 @@ public final class Config {
 		return CONFIGPROPERTY;
 	}
 
-	public static String getChromedriverpath() {
-		return CHROMEDRIVERPATH;
-	}
+	
 
 }
