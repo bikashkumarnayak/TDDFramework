@@ -20,6 +20,7 @@ public class TestBase {
 	public void login() throws Exception {
 		Loginpage lo=new Loginpage();
 		lo.getUser().getPass();
+		Thread.sleep(3000);
 	}
 
 }
