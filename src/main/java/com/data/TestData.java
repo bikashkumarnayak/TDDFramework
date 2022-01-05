@@ -3,10 +3,9 @@ package com.data;
 public class TestData {
 
 	private static String username="admin@yourstore.com";
-	private static String password="admin@yourstore.com";
+	private static String password="admin";
 	
-	
-	
+		
 	public static String getUsername() {
 		return username;
 	}
