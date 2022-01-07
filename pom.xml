@@ -50,7 +50,6 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -122,6 +121,13 @@
 			<artifactId>commons-email</artifactId>
 			<version>1.5</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+		</dependency>
+
 
 	</dependencies>
 

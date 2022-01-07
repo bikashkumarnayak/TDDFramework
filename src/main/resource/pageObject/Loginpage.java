@@ -13,9 +13,7 @@ public final class Loginpage extends CommonUtility {
 	private By pass=RelativeLocator.with(By.tagName("input")).below(user);
 	private By login=By.cssSelector("button[type='submit']");
 
-	
-	
-	String log="";
+
 	public Loginpage getUser() throws Exception {
 		
 		clear(user);
