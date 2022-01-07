@@ -1,8 +1,7 @@
 package com.FrameworkConfig;
 
 import com.Enum.ConfigProperty;
-
-import propertyfile.PropetyFile;
+import com.propertyfile.PropetyFile;
 
 public final class Config {
 	

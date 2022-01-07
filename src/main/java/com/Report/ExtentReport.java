@@ -15,9 +15,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.JsonFormatter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.aventstack.extentreports.reporter.configuration.ViewName;
+import com.propertyfile.PropetyFile;
 import com.readUtilities.ReportPath;
-
-import propertyfile.PropetyFile;
 
 
 public final class ExtentReport {

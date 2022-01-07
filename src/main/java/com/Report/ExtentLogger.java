@@ -3,9 +3,9 @@ package com.Report;
 import com.Enum.ConfigProperty;
 import com.FrameworkConfig.Config;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.propertyfile.PropetyFile;
 
 import ScreenShot.ScreenshotUtils;
-import propertyfile.PropetyFile;
 
 /*
  * Creating screenshot and attaching to report in Base64Encoding

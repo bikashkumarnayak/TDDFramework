@@ -1,4 +1,4 @@
-package dataProvaider;
+package com.dataProvaider;
 
 import java.io.File;
 import java.io.FileInputStream;

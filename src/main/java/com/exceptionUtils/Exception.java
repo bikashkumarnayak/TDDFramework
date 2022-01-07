@@ -1,4 +1,4 @@
-package exceptionUtils;
+package com.exceptionUtils;
 
 public class Exception extends RuntimeException {
 	

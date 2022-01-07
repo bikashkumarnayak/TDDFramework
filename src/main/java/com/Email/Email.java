@@ -21,9 +21,8 @@ import javax.mail.internet.MimeMultipart;
 
 import com.Enum.ConfigProperty;
 import com.FrameworkConfig.Config;
+import com.propertyfile.PropetyFile;
 import com.readUtilities.ReportPath;
-
-import propertyfile.PropetyFile;
 
 /**
  * Email class is responsible for setting up the mail server. Its also responsible for sending the generated Test Report via email.

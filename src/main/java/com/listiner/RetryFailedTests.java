@@ -5,8 +5,7 @@ import org.testng.ITestResult;
 
 import com.Enum.ConfigProperty;
 import com.FrameworkConfig.Config;
-
-import propertyfile.PropetyFile;
+import com.propertyfile.PropetyFile;
 
 public class RetryFailedTests implements IRetryAnalyzer {
 

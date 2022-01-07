@@ -1,4 +1,4 @@
-package excelUtiles;
+package com.excelUtiles;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

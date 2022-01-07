@@ -1,4 +1,4 @@
-package utils;
+package com.utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 
-public final class LocaterFactory {
+public  class LocaterFactory {
 
 	LocaterFactory(){
 		

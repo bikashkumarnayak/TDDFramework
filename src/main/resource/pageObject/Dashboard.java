@@ -1,6 +1,6 @@
 package pageObject;
 
-import utils.CommonUtility;
+import com.utils.CommonUtility;
 
 public class Dashboard extends CommonUtility {
 

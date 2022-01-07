@@ -10,8 +10,7 @@ import org.apache.commons.lang3.time.DateUtils;
 
 import com.Enum.ConfigProperty;
 import com.FrameworkConfig.Config;
-
-import propertyfile.PropetyFile;
+import com.propertyfile.PropetyFile;
 
 /**
  * 

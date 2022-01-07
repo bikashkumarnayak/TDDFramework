@@ -1,4 +1,4 @@
-package exceptionUtils;
+package com.exceptionUtils;
 
 @SuppressWarnings("serial")
 public class BrowserInvocationFailedException extends Exception {

@@ -1,4 +1,4 @@
-package utils;
+package com.utils;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -16,7 +16,7 @@ import com.wait.ExplicitWaitFactory;
 
 
 
-public class CommonUtility {
+public class CommonUtility extends LocaterFactory {
 
 	Actions action;
 	JavascriptExecutor js;

@@ -1,4 +1,4 @@
-package propertyfile;
+package com.propertyfile;
 
 import java.io.File;
 import java.io.FileNotFoundException;

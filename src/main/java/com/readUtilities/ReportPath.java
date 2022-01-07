@@ -5,8 +5,7 @@ import java.util.Date;
 
 import com.Enum.ConfigProperty;
 import com.FrameworkConfig.Config;
-
-import propertyfile.PropetyFile;
+import com.propertyfile.PropetyFile;
 
 public final class ReportPath {
 
