@@ -28,55 +28,39 @@ public final class Driver {
 
 	}
 
-	public static void initDriver() throws Exception{
+	public static void initDriver() throws Exception {
 
-		WebDriver driver=null;
-		String remort=PropetyFile.get(ConfigProperty.RUNMODE);
+//		WebDriver driver = null;
+		String remort = PropetyFile.get(ConfigProperty.RUNMODE);
 		String browserName = PropetyFile.get(ConfigProperty.BROWSER);
 		if (Objects.isNull(DriverManager.getDriver())) {
-			
-			if (browserName.equalsIgnoreCase(Config.getChrome())) {
 
-				if (remort.equalsIgnoreCase("remote")) {
-					cap = new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.CHROME);
-					driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-				} else {
-					WebDriverManager.chromedriver().setup();
-					driver=new ChromeDriver();
-					DriverManager.setDriver(driver);
-				}
-
-			} else if (browserName.equalsIgnoreCase(Config.getFirefox())) {
-				if (remort.equalsIgnoreCase("remote")) {
-					cap = new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.FIREFOX);
-					driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-				} else {
-					WebDriverManager.firefoxdriver().setup();
-					DriverManager.setDriver(new FirefoxDriver());
-				}
-			} else if (browserName.equalsIgnoreCase(Config.getIe())) {
-				if (remort.equalsIgnoreCase("remote")) {
-					cap = new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.IE);
-					driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-				} else {
-					WebDriverManager.iedriver().setup();
-					driver=new InternetExplorerDriver();
-					DriverManager.setDriver(driver);
-				}
-			}
-			DriverManager.getDriver().manage().window().maximize();
-			DriverManager.getDriver().manage().deleteAllCookies();
-			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Config.getExplecitywait()));
-			try {
-				DriverManager.getDriver().get(Jsonutiles.get(ConfigProperty.URL));
-			} catch (Exception e) {
-				e.printStackTrace();
+			switch (browserName) {
+			case "chrome":
+				WebDriverManager.chromedriver().setup();
+				DriverManager.setDriver(new ChromeDriver());
+				break;
+			case "firefox":
+				WebDriverManager.firefoxdriver().setup();
+				DriverManager.setDriver(new FirefoxDriver());
+				break;
+			case "remort":
+				cap = new DesiredCapabilities();
+				cap.setBrowserName(BrowserType.FIREFOX);
+				new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+				break;
 			}
 
 		}
+		DriverManager.getDriver().manage().window().maximize();
+		DriverManager.getDriver().manage().deleteAllCookies();
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Config.getExplecitywait()));
+		try {
+			DriverManager.getDriver().get(Jsonutiles.get(ConfigProperty.URL));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public static void quitDriver() {
