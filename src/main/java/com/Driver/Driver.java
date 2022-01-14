@@ -3,12 +3,9 @@ package com.Driver;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -20,6 +17,7 @@ import com.propertyfile.PropetyFile;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+@SuppressWarnings("deprecation")
 public final class Driver {
 
 	static DesiredCapabilities cap;
@@ -28,9 +26,11 @@ public final class Driver {
 
 	}
 
+	
 	public static void initDriver() throws Exception {
 
 //		WebDriver driver = null;
+		@SuppressWarnings("unused")
 		String remort = PropetyFile.get(ConfigProperty.RUNMODE);
 		String browserName = PropetyFile.get(ConfigProperty.BROWSER);
 		if (Objects.isNull(DriverManager.getDriver())) {

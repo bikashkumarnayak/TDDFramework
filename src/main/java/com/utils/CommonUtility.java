@@ -1,6 +1,9 @@
 package com.utils;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Consumer;
 
 import org.openqa.selenium.Alert;
@@ -160,6 +163,27 @@ public class CommonUtility extends LocaterFactory {
 		consumer.accept(select);
 		return select;
 	
+	}
+	protected void Windowhandle(){
+		Set<String> win=DriverManager.getDriver().getWindowHandles();
+		Iterator<String> it=win.iterator();
+		DriverManager.getDriver().switchTo().window(it.next());	
+	}
+	protected void widowhandle_By_index(int indexnumber) {
+		List<String> ListofWindow=new ArrayList<String>(DriverManager.getDriver().getWindowHandles());
+		DriverManager.getDriver().switchTo().window(ListofWindow.get(indexnumber));
+	}
+	protected void Widowhandle_by_title() {
+		String excepted=DriverManager.getDriver().getTitle();
+		List<String> ListofWindow=new ArrayList<String>(DriverManager.getDriver().getWindowHandles());
+		for (String win : ListofWindow) {
+		String actule=DriverManager.getDriver().getTitle();
+		if(excepted.equals(actule)) {
+			DriverManager.getDriver().switchTo().window(win);
+			break;
+		}
+		}
+		
 	}
 
 }
