@@ -1,5 +1,6 @@
 package com.utils;
 
+import org.openqa.selenium.Rectangle;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -184,6 +185,14 @@ public class CommonUtility extends LocaterFactory {
 		}
 		}
 		
+	}
+	protected Rectangle getrect(By by) {
+		Rectangle rect=findelement(by).getRect();
+		rect.getX();
+		rect.getY();
+		rect.getHeight();
+		rect.getWidth();
+		return rect;
 	}
 
 }
