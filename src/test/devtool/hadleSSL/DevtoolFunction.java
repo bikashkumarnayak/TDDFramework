@@ -1,7 +1,11 @@
 package hadleSSL;
 
+import java.net.URI;
 import java.util.Optional;
+import java.util.function.Predicate;
 
+import org.openqa.selenium.HasAuthentication;
+import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v95.emulation.Emulation;
@@ -21,6 +25,12 @@ public final class DevtoolFunction {
 		devtool.createSession();
 		devtool.send(Emulation.setGeolocationOverride(Optional.of(lat),Optional.of(longitude)
 				,Optional.of(1)));
+		return devtool;
+	}
+	public static DevTools BrowserBasicAuthontication(String URL,String URLPath,String username,String password) {
+		Predicate<URI> uriPredicate = uri -> uri.getHost().contains(URLPath);
+		((HasAuthentication) DriverManager.getDriver()).register(uriPredicate, UsernameAndPassword.of(username, password));
+		DriverManager.getDriver().get(URL);
 		return devtool;
 	}
 	
