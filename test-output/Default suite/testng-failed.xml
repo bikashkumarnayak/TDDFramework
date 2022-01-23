@@ -8,6 +8,7 @@
           <include name="loginvalidation"/>
           <include name="beforeIntialization"/>
           <include name="threadDown"/>
+          <include name="login"/>
         </methods>
       </class> <!-- setting.login -->
     </classes>

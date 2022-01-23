@@ -142,8 +142,8 @@ public class CommonUtility extends LocaterFactory {
 		return DriverManager.getDriver().findElements(by).isEmpty();
 	}
 
-	protected int getAllElemetsEmpty(By by) {
-		return DriverManager.getDriver().findElements(by).size();
+	protected int getSize(By by) {
+		return findelements(by).size();
 	}
 
 	protected boolean isStringContains(By by, String value) {

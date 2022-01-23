@@ -16,11 +16,11 @@ public class TestBase {
 	public void threadDown() {
 		Driver.quitDriver();
 	}
-	@BeforeClass
+	/*@BeforeClass
 	public void login() throws Exception {
 		Loginpage lo=new Loginpage();
 		lo.getUser().getPass();
 		Thread.sleep(3000);
-	}
+	}*/
 
 }
