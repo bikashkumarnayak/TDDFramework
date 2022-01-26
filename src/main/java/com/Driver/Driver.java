@@ -45,7 +45,12 @@ public final class Driver {
 				WebDriverManager.firefoxdriver().setup();
 				DriverManager.setDriver(new FirefoxDriver());
 				break;
-			case "remort":
+			case"RemortChrome":
+				cap = new DesiredCapabilities();
+				cap.setBrowserName(BrowserType.FIREFOX);
+				new RemoteWebDriver(new URL("http://localhost:4455/wd/hub"), cap);
+				break;
+			case "parallel":
 				cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.FIREFOX);
 				new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);

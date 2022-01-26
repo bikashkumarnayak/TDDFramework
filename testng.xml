@@ -11,4 +11,9 @@
       <class name="setting.login"/>
     </classes>
   </test> <!-- Test -->
+  <test thread-count="5" name="Dashboard">
+    <classes>
+      <class name="setting.DashboardPage"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
