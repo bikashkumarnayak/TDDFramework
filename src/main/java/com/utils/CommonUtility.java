@@ -156,6 +156,7 @@ public class CommonUtility extends LocaterFactory {
 
 	protected boolean isStringEqualsIgnoreCase(By by, String value) {
 		return DriverManager.getDriver().findElement(by).getText().equalsIgnoreCase(value);
+		
 	}
 
 	protected Select selectDropDown(By by, Consumer<Select> consumer) {
@@ -173,6 +174,7 @@ public class CommonUtility extends LocaterFactory {
 	protected void widowhandle_By_index(int indexnumber) {
 		List<String> ListofWindow=new ArrayList<String>(DriverManager.getDriver().getWindowHandles());
 		DriverManager.getDriver().switchTo().window(ListofWindow.get(indexnumber));
+		//allswitchTo(e->e.window(ListofWindow.get(indexnumber)));
 	}
 	protected void Widowhandle_by_title() {
 		String excepted=DriverManager.getDriver().getTitle();
@@ -180,18 +182,16 @@ public class CommonUtility extends LocaterFactory {
 		for (String win : ListofWindow) {
 		String actule=DriverManager.getDriver().getTitle();
 		if(excepted.equals(actule)) {
-			DriverManager.getDriver().switchTo().window(win);
+			allswitchTo(e->e.window(win));
 			break;
+			
 		}
 		}
 		
 	}
-	protected Rectangle getrect(By by) {
+	protected  Rectangle getrect(By by,Consumer<Rectangle> consumer) {
 		Rectangle rect=findelement(by).getRect();
-		rect.getX();
-		rect.getY();
-		rect.getHeight();
-		rect.getWidth();
+		consumer.accept(rect);
 		return rect;
 	}
 
