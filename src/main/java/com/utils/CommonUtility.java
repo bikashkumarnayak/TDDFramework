@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver.Navigation;
 import org.openqa.selenium.WebDriver.TargetLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -193,6 +194,11 @@ public class CommonUtility extends LocaterFactory {
 		Rectangle rect=findelement(by).getRect();
 		consumer.accept(rect);
 		return rect;
+	}
+	protected Navigation Navigate(Consumer<Navigation> consumer) {
+		Navigation nav= DriverManager.getDriver().navigate();
+		consumer.accept(nav);
+		return nav;
 	}
 
 }
