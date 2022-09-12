@@ -80,7 +80,4 @@ public final class ExcelUtils {
 		} 
 		return list;
 	}
-	/*public static void main(String[] args) throws InvalidFormatException {
-		ExcelUtils.getDataDeatils("EmpLocation");
-	}*/
 }

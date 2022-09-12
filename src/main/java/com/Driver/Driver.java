@@ -15,7 +15,6 @@ import com.FrameworkConfig.Config;
 import com.propertyfile.Jsonutiles;
 import com.propertyfile.PropetyFile;
 
-import devToolsMethod.DevtoolFunction;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @SuppressWarnings("deprecation")

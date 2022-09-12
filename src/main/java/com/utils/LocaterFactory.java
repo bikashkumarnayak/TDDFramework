@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 
-public  class LocaterFactory {
+public  class LocaterFactory extends HandleDates {
 
 	LocaterFactory(){
 		
