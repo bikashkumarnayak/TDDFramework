@@ -14,17 +14,18 @@ public final class Loginpage extends CommonUtility {
 	private By login=By.cssSelector("button[type='submit']");
 
 
-	public Loginpage getUser() throws Exception {
-		
+	public Loginpage getUser(String username) throws Exception {		
 		clear(user);
-		sendKeys(user, TestData.getUsername());
+//		sendKeys(user, TestData.getUsername());
+		sendKeys(user, username);
 		return this;
 	}
 
-	public Loginpage getPass() throws Exception {
+	public Loginpage getPass(String password) throws Exception {
 		clear(pass);
 		Thread.sleep(500);
-		sendKeys(pass, TestData.getPassword());
+//		sendKeys(pass, TestData.getPassword());
+		sendKeys(pass, password);
 		Thread.sleep(500);
 		click(login);
 		return this;

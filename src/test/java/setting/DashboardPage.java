@@ -1,10 +1,12 @@
 package setting;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.Driver.TestBase;
 import com.Enum.CatagaryType;
 import com.annotation.FrameworkAnnotation;
+import com.data.TestData;
 
 import pageObject.Loginpage;
 import pageObject.Dashboard;
@@ -16,13 +18,13 @@ public class DashboardPage extends TestBase {
 	
 	
 	@FrameworkAnnotation(authors= {"Bikash"},category= {CatagaryType.REGRESSION})
-	@Test(priority = 1)
+	@BeforeTest
 	public void loginvalidation() throws Exception {
-		lo.getUser().getPass();
+		lo.getUser(TestData.getUsername()).getPass(TestData.getPassword());
 	}
 	
 	@FrameworkAnnotation(authors = "bikash",category =CatagaryType.SANITY )
-	@Test(priority=2)
+	@Test(priority=1)
 	public void Dashboard_Test1() {
 		d.getOrderDetails();
 	}

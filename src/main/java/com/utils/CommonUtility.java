@@ -1,7 +1,12 @@
 package com.utils;
 
 import org.openqa.selenium.Rectangle;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -199,6 +204,59 @@ public class CommonUtility extends LocaterFactory {
 		Navigation nav= DriverManager.getDriver().navigate();
 		consumer.accept(nav);
 		return nav;
+	}
+	public void calender_handle(String tdate,String dateformat,By fild,By text,String act_dateFormat,By prv_buttton,By next_button ) throws Exception {
+		Calendar calender=Calendar.getInstance();
+		String targetdate=tdate;
+		SimpleDateFormat targetDateformate=new SimpleDateFormat(dateformat);
+		Date Formatedate;
+		try {
+			targetDateformate.setLenient(false);
+			Formatedate=targetDateformate.parse(targetdate);
+			calender.setTime(Formatedate);
+			int targetDay=calender.get(Calendar.DAY_OF_MONTH);
+			int targetmonth=calender.get(Calendar.MONTH);
+			int targetyear=calender.get(Calendar.YEAR);
+			click(fild);
+			String todaydate=getText(text);
+			calender.setTime(new SimpleDateFormat(act_dateFormat).parse(todaydate));
+			int actualmonth=calender.get(Calendar.MONTH);
+			int actualyear=calender.get(Calendar.YEAR);
+			System.out.println(targetyear);
+			if(targetyear<actualyear) {
+			while(targetmonth<actualmonth || targetyear<actualyear) {
+				click(prv_buttton);
+				todaydate=getText(text);
+				calender.setTime(new SimpleDateFormat(act_dateFormat).parse(todaydate));
+				actualmonth=calender.get(Calendar.MONTH);
+				actualyear=calender.get(Calendar.YEAR);	
+			}	
+			}
+			else {
+				while(targetmonth>actualmonth || targetyear>actualyear) {
+					click(next_button);
+					todaydate=getText(text);
+					calender.setTime(new SimpleDateFormat(act_dateFormat).parse(todaydate));
+					actualmonth=calender.get(Calendar.MONTH);
+					actualyear=calender.get(Calendar.YEAR);	
+				}	
+			}
+			List<WebElement> dates=DriverManager.getDriver().findElements(By.xpath("//*[@class='ui-datepicker-calendar']"
+					+ "//a[not(contains(@class,'ui-state-default ui-priority-secondary'))]"));
+			for (WebElement date : dates) {
+				String actdate=date.getText();
+				int da=Integer.parseInt(actdate);
+				if(da==targetDay) {
+				date.click();
+				break;
+				
+				}
+				
+			}
+			
+		} catch (ParseException e) {
+			throw new Exception("Invalide date is provaided,Please check into that");
+		}
 	}
 
 }

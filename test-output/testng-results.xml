@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-23T20:57:24 IST" name="Default suite" finished-at="2022-01-23T20:57:40 IST" duration-ms="16337">
+  <suite name="Suite" duration-ms="44394" started-at="2022-09-13T21:19:48 IST" finished-at="2022-09-13T21:20:32 IST">
     <groups>
     </groups>
-    <test started-at="2022-01-23T20:57:24 IST" name="Default test" finished-at="2022-01-23T20:57:40 IST" duration-ms="16337">
-      <class name="setting.DashboardPage">
-        <test-method is-config="true" signature="beforeIntialization()[pri:0, instance:setting.DashboardPage@7283d3eb]" started-at="2022-01-23T20:57:24 IST" name="beforeIntialization" finished-at="2022-01-23T20:57:33 IST" duration-ms="8992" status="PASS">
+    <test name="Test" duration-ms="31578" started-at="2022-09-13T21:19:48 IST" finished-at="2022-09-13T21:20:19 IST">
+      <class name="setting.login">
+        <test-method status="PASS" signature="beforeIntialization()[pri:0, instance:setting.login@1460a8c0]" name="beforeIntialization" is-config="true" duration-ms="20413" started-at="2022-09-13T21:19:48 IST" finished-at="2022-09-13T21:20:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeIntialization -->
-        <test-method signature="loginvalidation()[pri:1, instance:setting.DashboardPage@7283d3eb]" started-at="2022-01-23T20:57:33 IST" name="loginvalidation" finished-at="2022-01-23T20:57:39 IST" duration-ms="6542" status="PASS">
+        <test-method status="PASS" signature="loginvalidation(java.lang.String,java.lang.String)[pri:0, instance:setting.login@1460a8c0]" name="loginvalidation" duration-ms="3533" started-at="2022-09-13T21:20:08 IST" data-provider="nopcommerce" finished-at="2022-09-13T21:20:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcd@yourstore.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[55]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginvalidation -->
-        <test-method signature="Dashboard_Test1()[pri:2, instance:setting.DashboardPage@7283d3eb]" started-at="2022-01-23T20:57:39 IST" name="Dashboard_Test1" finished-at="2022-01-23T20:57:40 IST" duration-ms="332" status="PASS">
+        <test-method status="PASS" signature="loginvalidation(java.lang.String,java.lang.String)[pri:0, instance:setting.login@1460a8c0]" name="loginvalidation" duration-ms="6666" started-at="2022-09-13T21:20:12 IST" data-provider="nopcommerce" finished-at="2022-09-13T21:20:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@yourstore.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginvalidation -->
+        <test-method status="PASS" signature="threadDown()[pri:0, instance:setting.login@1460a8c0]" name="threadDown" is-config="true" duration-ms="861" started-at="2022-09-13T21:20:19 IST" finished-at="2022-09-13T21:20:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- threadDown -->
+      </class> <!-- setting.login -->
+    </test> <!-- Test -->
+    <test name="Dashboard" duration-ms="12796" started-at="2022-09-13T21:20:19 IST" finished-at="2022-09-13T21:20:32 IST">
+      <class name="setting.DashboardPage">
+        <test-method status="PASS" signature="beforeIntialization()[pri:0, instance:setting.DashboardPage@4df50bcc]" name="beforeIntialization" is-config="true" duration-ms="5120" started-at="2022-09-13T21:20:20 IST" finished-at="2022-09-13T21:20:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeIntialization -->
+        <test-method status="PASS" signature="loginvalidation()[pri:0, instance:setting.DashboardPage@4df50bcc]" name="loginvalidation" is-config="true" duration-ms="6709" started-at="2022-09-13T21:20:25 IST" depends-on-methods="com.Driver.TestBase.beforeIntialization" finished-at="2022-09-13T21:20:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginvalidation -->
+        <test-method status="PASS" signature="Dashboard_Test1()[pri:1, instance:setting.DashboardPage@4df50bcc]" name="Dashboard_Test1" duration-ms="165" started-at="2022-09-13T21:20:31 IST" finished-at="2022-09-13T21:20:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Dashboard_Test1 -->
-        <test-method is-config="true" signature="threadDown()[pri:0, instance:setting.DashboardPage@7283d3eb]" started-at="2022-01-23T20:57:40 IST" name="threadDown" finished-at="2022-01-23T20:57:40 IST" duration-ms="387" status="PASS">
+        <test-method status="PASS" signature="threadDown()[pri:0, instance:setting.DashboardPage@4df50bcc]" name="threadDown" is-config="true" duration-ms="792" started-at="2022-09-13T21:20:31 IST" finished-at="2022-09-13T21:20:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- threadDown -->
       </class> <!-- setting.DashboardPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Dashboard -->
+  </suite> <!-- Suite -->
 </testng-results>
