@@ -8,11 +8,12 @@ import org.openqa.selenium.HasAuthentication;
 import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v104.emulation.Emulation;
+import org.openqa.selenium.devtools.v104.log.Log;
+import org.openqa.selenium.devtools.v104.security.Security;
 import org.openqa.selenium.devtools.v85.network.Network;
 import org.openqa.selenium.devtools.v85.network.model.ConnectionType;
-import org.openqa.selenium.devtools.v95.log.Log;
-import org.openqa.selenium.devtools.v95.emulation.Emulation;
-import org.openqa.selenium.devtools.v95.security.Security;
+
 
 import com.Driver.DriverManager;
 

@@ -78,9 +78,9 @@ public class DataprovaiderTestData {
 		return data;
 		
 	}
-	@DataProvider(name="AirfaceData")
+	@DataProvider(name="nopcommerce")
 	public Object[][] getAirfacedata(){
-		return new Object[][] {{"BIKASH","55"},{"sumeet.thakur@abstechno.in","11"}};
+		return new Object[][] {{"abcd@yourstore.com","55"},{"admin@yourstore.com","admin"}};
 		
 	}
 	

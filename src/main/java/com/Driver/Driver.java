@@ -4,8 +4,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Objects;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -33,16 +32,23 @@ public final class Driver {
 		@SuppressWarnings("unused")
 		String remort = PropetyFile.get(ConfigProperty.RUNMODE);
 		String browserName = PropetyFile.get(ConfigProperty.BROWSER);
+		ChromeOptions option=new ChromeOptions();
+		option.setHeadless(true);
 		if (Objects.isNull(DriverManager.getDriver())) {
 
-			switch (browserName) {
+			switch (remort) {
 			case "chrome":
-				WebDriverManager.chromedriver().setup();
-				DriverManager.setDriver(new ChromeDriver());
+				DriverManager.setDriver(WebDriverManager.chromedriver().create());
 				break;
 			case "firefox":
-				WebDriverManager.firefoxdriver().setup();
-				DriverManager.setDriver(new FirefoxDriver());
+				DriverManager.setDriver(WebDriverManager.firefoxdriver().create());
+				break;
+			case "Headless_Chrome":
+				DriverManager.setDriver(WebDriverManager.chromedriver().capabilities(option).create());
+				break;
+			case "Headless_Firefox":
+				
+				DriverManager.setDriver(WebDriverManager.firefoxdriver().capabilities(option).create());
 				break;
 			case"RemortChrome":
 				cap = new DesiredCapabilities();
@@ -51,7 +57,7 @@ public final class Driver {
 				break;
 			case "parallel":
 				cap = new DesiredCapabilities();
-				cap.setBrowserName(BrowserType.FIREFOX);
+				cap.setBrowserName(BrowserType.CHROME);
 				new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
 				break;
 			}
@@ -68,7 +74,7 @@ public final class Driver {
 
 	}
 
-	public static void quitDriver() {
+	static void quitDriver() {
 		if (Objects.nonNull(DriverManager.getDriver())) {
 			DriverManager.getDriver().quit();
 			DriverManager.unload();

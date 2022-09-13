@@ -1,5 +1,7 @@
 package com.Factory;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,15 +16,15 @@ public class ExplicityWaitFactory {
 	@SuppressWarnings("deprecation")
 	public static WebElement performExplecityWait(ConfigProperty wait,By by) {
 		if(wait==ConfigProperty.CLICKABLE) {
-		element=	new WebDriverWait(DriverManager.getDriver(),Config.getExplecitywait())
+		element=	new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(Config.getExplecitywait()))
 			.until(ExpectedConditions.elementToBeClickable(by));
 		}
 		else if(wait==ConfigProperty.PRESENCE) {
-			element=new WebDriverWait(DriverManager.getDriver(),Config.getExplecitywait())
+			element=new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(Config.getExplecitywait()))
 			.until(ExpectedConditions.presenceOfElementLocated(by));
 		}
 		else if(wait==ConfigProperty.VISIBLE) {
-		element=new WebDriverWait(DriverManager.getDriver(),Config.getExplecitywait())
+		element=new WebDriverWait(DriverManager.getDriver(),Duration.ofSeconds(Config.getExplecitywait()))
 			.until(ExpectedConditions.visibilityOfElementLocated(by));
 		}
 		return element;
