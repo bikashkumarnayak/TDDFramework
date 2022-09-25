@@ -1,6 +1,6 @@
 package com.readUtilities;
 
-import com.Email.Email;
+
 
 /**
  * 
@@ -30,7 +30,7 @@ public final class UserInputCheck {
 	 */
 	public static void sendTestReportOnEmail() {
 		try {
-			Email.sendMail();
+			//Email.sendMail();
 		} catch (Exception e) {
 			designerOutputForErrorInSendingReport();
 		}

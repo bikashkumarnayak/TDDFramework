@@ -17,47 +17,47 @@ import ScreenShot.ScreenshotUtils;
 public class Listener implements ITestListener, ISuiteListener  {
 	@Override
 	public void onStart(ISuite suite) {
-		try {
+		/*try {
 			ExtentReport.initReports();
 		} catch (Exception e) {
 		
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	@Override
 	public void onFinish(ISuite suite) {
-		try {
+		/*try {
 			ExtentReport.flushReport();
 		} catch (Exception e) {
 			
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		ExtentReport.createTest(result.getMethod().getMethodName());
+		/*ExtentReport.createTest(result.getMethod().getMethodName());
 		ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
 				.authors());
 		ExtentReport.addCategory(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
-				.category());
+				.category());*/
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		ExtentLogger.pass(result.getMethod().getMethodName() + " is passed");
+		/*ExtentLogger.pass(result.getMethod().getMethodName() + " is passed");*/
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		try {
-			ExtentLogger.fail(result.getMethod().getMethodName() + " is failed",true);
+		/*try {
+			ExtentLogger.fail(result.getMethod().getMethodName() +"is failed",true);
 			ExtentLogger.fail(result.getThrowable().toString());
 			ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 		try {
 			ScreenshotUtils.getScreenshot(result.getName());
 		} catch (Exception e) {
@@ -68,19 +68,17 @@ public class Listener implements ITestListener, ISuiteListener  {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		try {
-			ExtentLogger.skip(result.getMethod().getMethodName() + " is failed",true);
-			
+		/*try {
+			ExtentLogger.skip(result.getMethod().getMethodName() +"is Skiped",true);	
 		} catch (Exception e) { 
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		
 	}
-
 	@Override
 	public void onStart(ITestContext context) {
 		

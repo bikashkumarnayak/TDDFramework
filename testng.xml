@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-
 <suite name="Suite">
 <listeners>
   <listener class-name="com.listiner.Listener"/>
-<!-- listener class-name="report.ExtentReporterNG"/>-->
+<!-- listener class-name="report.ExtentReporterNG"/-->
 </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Login">
     <classes>
       <class name="setting.login"/>
     </classes>
-  </test> <!-- Test -->
-  <test thread-count="5" name="Dashboard">
+  </test>
+  <test  name="Dashboard">
     <classes>
-      <class name="setting.DashboardPage"/>
+      <class name="setting.DashBoardPage_01"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
 </suite> <!-- Suite -->

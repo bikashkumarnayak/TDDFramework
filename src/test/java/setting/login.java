@@ -7,13 +7,17 @@ import com.Enum.CatagaryType;
 import com.annotation.FrameworkAnnotation;
 import com.dataProvaider.DataprovaiderTestData;
 
-import pageObject.Loginpage;
+import PageObjectModule.LogInValidation;
+
+
+
 
 public class login extends TestBase {
 
 	
-	Loginpage lo=new Loginpage();
-	@FrameworkAnnotation(authors= {"Bikash"},category= {CatagaryType.REGRESSION})
+	private LogInValidation lo=new LogInValidation();
+	
+//	@FrameworkAnnotation(authors= {"Bikash"},category= {CatagaryType.REGRESSION})
 	@Test(dataProvider = "nopcommerce",dataProviderClass = DataprovaiderTestData.class)
 	public void loginvalidation(String username,String password) throws Exception {
 		lo.getUser(username).getPass(password);
