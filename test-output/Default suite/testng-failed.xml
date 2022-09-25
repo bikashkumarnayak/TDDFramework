@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="setting.DashBoardPage_01">
+      <class name="setting.login">
         <methods>
-          <include name="Dashboard_Test1"/>
           <include name="loginvalidation"/>
+          <include name="beforeIntialization"/>
+          <include name="threadDown"/>
         </methods>
-      </class> <!-- setting.DashBoardPage_01 -->
+      </class> <!-- setting.login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

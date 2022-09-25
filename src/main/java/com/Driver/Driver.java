@@ -4,6 +4,8 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Objects;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -52,13 +54,13 @@ public final class Driver {
 				break;
 			case"RemortChrome":
 				cap = new DesiredCapabilities();
-				cap.setBrowserName(BrowserType.FIREFOX);
-				new RemoteWebDriver(new URL("http://localhost:4455/wd/hub"), cap);
+				cap.setBrowserName(BrowserType.CHROME);
+				DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4455/wd/hub"), cap));
 				break;
 			case "parallel":
 				cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.CHROME);
-				new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+				DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4455/wd/hub"),cap));
 				break;
 			}
 

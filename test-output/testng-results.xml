@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="83420" started-at="2022-09-25T11:38:44 IST" finished-at="2022-09-25T11:40:07 IST">
+  <suite name="Suite" duration-ms="80852" started-at="2022-09-25T15:47:18 IST" finished-at="2022-09-25T15:48:39 IST">
     <groups>
     </groups>
-    <test name="Login" duration-ms="35138" started-at="2022-09-25T11:38:44 IST" finished-at="2022-09-25T11:39:19 IST">
+    <test name="Login" duration-ms="32958" started-at="2022-09-25T15:47:18 IST" finished-at="2022-09-25T15:47:51 IST">
       <class name="setting.login">
-        <test-method status="PASS" signature="beforeIntialization()[pri:0, instance:setting.login@fdefd3f]" name="beforeIntialization" is-config="true" duration-ms="9573" started-at="2022-09-25T11:38:44 IST" finished-at="2022-09-25T11:38:53 IST">
+        <test-method status="PASS" signature="beforeIntialization()[pri:0, instance:setting.login@fdefd3f]" name="beforeIntialization" is-config="true" duration-ms="22974" started-at="2022-09-25T15:47:18 IST" finished-at="2022-09-25T15:47:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeIntialization -->
-        <test-method status="PASS" signature="loginvalidation(java.lang.String,java.lang.String)[pri:0, instance:setting.login@fdefd3f]" name="loginvalidation" duration-ms="2434" started-at="2022-09-25T11:38:53 IST" data-provider="nopcommerce" finished-at="2022-09-25T11:38:56 IST">
+        <test-method status="PASS" signature="loginvalidation(java.lang.String,java.lang.String)[pri:0, instance:setting.login@fdefd3f]" name="loginvalidation" duration-ms="3104" started-at="2022-09-25T15:47:42 IST" data-provider="nopcommerce" finished-at="2022-09-25T15:47:45 IST">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginvalidation -->
-        <test-method status="PASS" signature="loginvalidation(java.lang.String,java.lang.String)[pri:0, instance:setting.login@fdefd3f]" name="loginvalidation" duration-ms="22375" started-at="2022-09-25T11:38:56 IST" data-provider="nopcommerce" finished-at="2022-09-25T11:39:18 IST">
+        <test-method status="PASS" signature="loginvalidation(java.lang.String,java.lang.String)[pri:0, instance:setting.login@fdefd3f]" name="loginvalidation" duration-ms="6622" started-at="2022-09-25T15:47:45 IST" data-provider="nopcommerce" finished-at="2022-09-25T15:47:51 IST">
           <params>
             <param index="0">
               <value>
@@ -43,27 +43,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginvalidation -->
-        <test-method status="PASS" signature="threadDown()[pri:0, instance:setting.login@fdefd3f]" name="threadDown" is-config="true" duration-ms="677" started-at="2022-09-25T11:39:18 IST" finished-at="2022-09-25T11:39:19 IST">
+        <test-method status="PASS" signature="threadDown()[pri:0, instance:setting.login@fdefd3f]" name="threadDown" is-config="true" duration-ms="154" started-at="2022-09-25T15:47:51 IST" finished-at="2022-09-25T15:47:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- threadDown -->
       </class> <!-- setting.login -->
     </test> <!-- Login -->
-    <test name="Dashboard" duration-ms="48253" started-at="2022-09-25T11:39:19 IST" finished-at="2022-09-25T11:40:07 IST">
+    <test name="Dashboard" duration-ms="47837" started-at="2022-09-25T15:47:51 IST" finished-at="2022-09-25T15:48:39 IST">
       <class name="setting.DashBoardPage_01">
-        <test-method status="PASS" signature="beforeIntialization()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="beforeIntialization" is-config="true" duration-ms="14060" started-at="2022-09-25T11:39:19 IST" finished-at="2022-09-25T11:39:33 IST">
+        <test-method status="PASS" signature="beforeIntialization()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="beforeIntialization" is-config="true" duration-ms="35612" started-at="2022-09-25T15:47:51 IST" finished-at="2022-09-25T15:48:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeIntialization -->
-        <test-method status="PASS" signature="loginvalidation()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="loginvalidation" is-config="true" duration-ms="23364" started-at="2022-09-25T11:39:33 IST" depends-on-methods="com.Driver.TestBase.beforeIntialization" finished-at="2022-09-25T11:39:56 IST">
+        <test-method status="PASS" signature="loginvalidation()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="loginvalidation" is-config="true" duration-ms="11541" started-at="2022-09-25T15:48:27 IST" depends-on-methods="com.Driver.TestBase.beforeIntialization" finished-at="2022-09-25T15:48:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginvalidation -->
-        <test-method status="PASS" signature="Dashboard_Test1()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="Dashboard_Test1" duration-ms="10058" started-at="2022-09-25T11:39:56 IST" finished-at="2022-09-25T11:40:06 IST">
+        <test-method status="PASS" signature="Dashboard_Test1()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="Dashboard_Test1" duration-ms="467" started-at="2022-09-25T15:48:39 IST" finished-at="2022-09-25T15:48:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Dashboard_Test1 -->
-        <test-method status="PASS" signature="threadDown()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="threadDown" is-config="true" duration-ms="766" started-at="2022-09-25T11:40:06 IST" finished-at="2022-09-25T11:40:07 IST">
+        <test-method status="PASS" signature="threadDown()[pri:0, instance:setting.DashBoardPage_01@229d10bd]" name="threadDown" is-config="true" duration-ms="210" started-at="2022-09-25T15:48:39 IST" finished-at="2022-09-25T15:48:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- threadDown -->

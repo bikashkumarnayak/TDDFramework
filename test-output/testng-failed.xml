@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.listiner.Listener"/>
-  </listeners>
-  <test thread-count="5" name="Login(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="setting.login">
         <methods>
-          <include name="loginvalidation" invocation-numbers="0 1"/>
+          <include name="loginvalidation"/>
           <include name="beforeIntialization"/>
           <include name="threadDown"/>
         </methods>
       </class> <!-- setting.login -->
     </classes>
-  </test> <!-- Login(failed) -->
-  <test thread-count="5" name="Dashboard(failed)">
-    <classes>
-      <class name="setting.DashBoardPage_01">
-        <methods>
-          <include name="beforeIntialization"/>
-          <include name="Dashboard_Test1"/>
-          <include name="threadDown"/>
-          <include name="loginvalidation"/>
-        </methods>
-      </class> <!-- setting.DashBoardPage_01 -->
-    </classes>
-  </test> <!-- Dashboard(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
